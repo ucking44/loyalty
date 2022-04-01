@@ -6,6 +6,7 @@ use App\Http\Controllers\LGAController;
 use App\Http\Controllers\WardController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\CitizenController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('dashboard');
+
+/////////////////////////  USERS ROUTE  ////////////////////////////
+Route::get('/users', [DashboardController::class, 'users']);
+
+/////////////////////////  DASHBOARD ROUTE  ////////////////////////////
+Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 
 /////////////////////////  STATE ROUTE  ////////////////////////////
 Route::get('/states', [StateController::class, 'index']);

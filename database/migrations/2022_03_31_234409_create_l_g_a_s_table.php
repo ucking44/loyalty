@@ -19,7 +19,7 @@ class CreateLGASTable extends Migration
             $table->string('lga_name')->index()->unique();
             $table->timestamps();
 
-            $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
+            //$table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
         });
     }
 

@@ -15,14 +15,28 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+        // Let's clear the users table first
+        //User::truncate();
+
         $faker = \Faker\Factory::create();
 
-        $password = Hash::make('corper123');
+        
+        $password = Hash::make('loyalty123');
 
         User::create([
-            'name' => 'Corper One',
-            'email' => 'corperone@corper.com',
+            'name' => 'Coper One',
+            'email' => 'corperone@test.com',
             'password' => $password,
         ]);
+
+        for ($i = 0; $i < 5; $i++) {
+            User::create([
+                'name' => $faker->name,
+                'email' => $faker->email,
+                'password' => $password,
+            ]);
+        }
+
+        
     }
 }

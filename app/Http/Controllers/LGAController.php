@@ -88,11 +88,6 @@ class LGAController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'state_name' => 'required',
-            'lga_name'     => 'required | unique:l_g_a_s',
-        ]);
-
         $lga = LGA::findOrFail($id);
         $lga->state_id = $request->state_name;
         $lga->lga_name = $request->lga_name;

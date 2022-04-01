@@ -19,7 +19,7 @@ class CreateWardsTable extends Migration
             $table->string('ward_name')->index()->unique();
             $table->timestamps();
 
-            $table->foreign('lga_id')->references('id')->on('l_g_a_s')->onDelete('cascade');
+            //$table->foreign('lga_id')->references('id')->on('l_g_a_s')->onDelete('cascade');
         });
     }
 

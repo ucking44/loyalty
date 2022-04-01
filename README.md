@@ -1,3 +1,7 @@
+<p>Note: A user (corper) is uniquely attached to the number of citizen he/she created. If a certain corper creates 20 citizens, then he/she can only have access to the 20 he/she created.</p>
+
+<p>I only seeded five data for each of the tables, apart from users table that I seeded 6</P>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

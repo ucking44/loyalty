@@ -183,47 +183,22 @@
             </div>
         </li> --}}
         <li class="dropdown">
+            @if (Auth::user())
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="{{ asset('admins/assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
+            
             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }} </div></a>
+            @else
+            <a></a><div class="d-sm-none d-lg-inline-block">{{ URL::to('/login') }} </div></a>
+            @endif
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-title">Logged in 5 min ago</div>
-                <a href="{{ URL::to('/profile') }}" class="dropdown-item has-icon"><i class="far fa-user"></i> Profile</a>
-                @if (Auth::user())
-                    <a href="{{ URL::to('/edit-password') }}" class="dropdown-item has-icon"><i class="fas fa-bolt"></i> Change Password</a>
-                @endif
+                <div class="dropdown-title"></div>
                 <a class="dropdown-item has-icon" href="{{URL::to('/logout')}}"
                         onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();"><i class="far fa-user"></i>Logout
-                        {{--  <i class="fa fa-sign-out"></i>  --}}
+                                    document.getElementById('logout-form').submit();"><i class="far fa-user"></i>LOGOUT
+                        
                 </a>
-            
-                <a href="#" class="dropdown-item has-icon"><i class="fas fa-cog"></i> Settings</a>
-                <div class="dropdown-divider"></div>
-
-                {{-- <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </li> --}}
-
-                {{--  <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();" 
-                    class="dropdown-item has-icon text-danger">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>  --}}
+        
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>

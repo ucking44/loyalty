@@ -11,7 +11,6 @@
             <li class="dropdown active">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
-                    {{-- <li><a class="nav-link" href="index-0.html">Analytics</a></li> dashboard --}}
                     <li class="active"><a class="nav-link" href="{{ URL::to('/dashboard') }}">Dashboard</a></li>
                 </ul>
             </li>
@@ -48,30 +47,13 @@
                     </ul>
                 </li>
 
-                
                 <li class="menu-header">Manage Users</li>
                 <li class="dropdown">
                     <a href="#" class="nav-link has-dropdown"><i class="far fa-chevron-down"></i> <span>Manage Users</span></a>
                     <ul class="dropdown-menu">
-    
-
-                        <li><a class="nav-link" href="{{ URL::to('/admin') }}">Admin</a></li>
-    
-                        <li><a class="nav-link" href="{{ URL::to('/staff') }}">Staff</a></li>
-        
+                        <li><a class="nav-link" href="{{ URL::to('/users') }}">Corpers</a></li>
                     </ul>
                 </li>
-
-                <!-- <li class="menu-header">...</li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link has-dropdown"><i class="far fa-chevron-down"></i> <span>...</span></a>
-                    <ul class="dropdown-menu">
-                        
-                        <li><a class="nav-link" href="#">...</a></li>
-                        
-                        <li><a class="nav-link" href="#">...</a></li>
-                    </ul>
-                </li> -->
         </ul>
     </aside>
 </div>

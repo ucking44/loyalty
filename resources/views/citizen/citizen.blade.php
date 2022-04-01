@@ -111,6 +111,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="column-title">S/N</th>
+                                            <th class="column-title">Corper Name </th>
                                             <th class="column-title">Ward Name </th>
                                             <th class="column-title">Citizen Name </th>
                                             <th class="column-title">Gender </th>
@@ -124,6 +125,7 @@
                                         @foreach($citizens as $key => $citizen)
                                             <tr>
                                                 <td>{{ $key +1 }}.</td>
+                                                <td>{{ $citizen->name }}</td>
                                                 <td>{{ $citizen->ward_name }}</td>
                                                 <td>{{ $citizen->citizen_name }}</td>
                                                 <td>{{ $citizen->gender }}</td>

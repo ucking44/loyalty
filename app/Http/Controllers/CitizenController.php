@@ -20,8 +20,10 @@ class CitizenController extends Controller
     {
         $wards = Ward::all();
         $citizens = DB::table('citizens')
+                    ->where('user_id', Auth::id())
+                    ->join('users', 'citizens.user_id', '=', 'users.id')
                     ->join('wards', 'citizens.ward_id', '=', 'wards.id')
-                    ->select('citizens.*', 'wards.ward_name')
+                    ->select('citizens.*', 'users.name', 'wards.ward_name')
                     ->latest()
                     ->get();
         return View::make('citizen.citizen', compact('wards', 'citizens'));
