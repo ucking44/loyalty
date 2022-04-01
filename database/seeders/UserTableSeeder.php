@@ -15,7 +15,6 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        // Let's clear the users table first
         //User::truncate();
 
         $faker = \Faker\Factory::create();
@@ -37,6 +36,5 @@ class UserTableSeeder extends Seeder
             ]);
         }
 
-        
     }
 }

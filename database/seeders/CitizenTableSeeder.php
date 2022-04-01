@@ -59,19 +59,5 @@ class CitizenTableSeeder extends Seeder
             'ward_id' => '5',
         ]);
 
-        // $faker = \Faker\Factory::create();
-
-        // for ($i = 0; $i < 100; $i++) {
-        //     Citizen::create([
-        //         'user_id' => $faker->unique()->numberBetween($min = 1, $max = 10000),
-        //         'citizen_name' => $faker->name,
-        //         "gender" => $faker->randomElement(["male", "female", "others"]),
-        //         'address' => $faker->address,
-        //         'phone' => $faker->numerify('###-####-####'),
-        //         'ward_id' => $faker->unique()->numberBetween($min = 1, $max = 10000),
-        //     ]);
-        // }
-
-        //factory('App\Models\Citizen', 200)->create();
     }
 }

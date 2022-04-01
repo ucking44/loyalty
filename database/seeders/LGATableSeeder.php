@@ -41,18 +41,5 @@ class LGATableSeeder extends Seeder
             'state_id' => '5',
         ]);
 
-        //LGA::factory()->count(37)->create();
-
-        // LGA::create([
-        //     'state_id' => 1,
-        //     'lga_name' => 'Mushin',
-        // ]);
-
-        // for ($i = 0; $i < 20; $i++) {
-        //     LGA::create([
-        //         'lga_name' => $faker->name,
-        //         'state_id' => $faker->unique()->numberBetween($min = 1, $max = 10000),
-        //     ]);
-        // }
     }
 }

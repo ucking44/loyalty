@@ -39,13 +39,5 @@ class WardTableSeeder extends Seeder
             'lga_id' => '5',
         ]);
 
-        // $faker = \Faker\Factory::create();
-
-        // for ($i = 0; $i < 100; $i++) {
-        //     Ward::create([
-        //         'ward_name' => $faker->name,
-        //         'lga_id' => $faker->unique()->numberBetween($min = 1, $max = 10000),
-        //     ]);
-        // }
     }
 }

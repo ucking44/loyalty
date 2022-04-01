@@ -34,16 +34,5 @@ class StateTableSeeder extends Seeder
             'state_name' => 'Imo',
         ]);
 
-        // $faker = \Faker\Factory::create();
-
-        // for ($i = 0; $i < 10; $i++) {
-        //     State::create([
-        //         'name' => $faker->name,
-        //     ]);
-        // }
-
-        //State::factory()->count(37)->create();
-        
-        //factory(State::class, 10)->create();
     }
 }
