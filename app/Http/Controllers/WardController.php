@@ -6,6 +6,7 @@ use App\Models\LGA;
 use App\Models\Ward;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\View;
 
 class WardController extends Controller
@@ -54,6 +55,7 @@ class WardController extends Controller
         $ward->ward_name = $request->ward_name;
         $ward->save();
 
+        Toastr::success('Ward Successfully Saved!!!', 'Saving Ward......');
         return back();
     }
 
@@ -93,6 +95,7 @@ class WardController extends Controller
         $ward->ward_name = $request->ward_name;
         $ward->save();
 
+        Toastr::success('Ward Successfully Updated!!!', 'Updating Ward......');
         return back();
     }
 
@@ -107,6 +110,7 @@ class WardController extends Controller
         $ward = Ward::findOrFail($id);
         $ward->delete();
 
+        Toastr::success('Ward Successfully deleted!!!', 'Deleting Ward......');
         return back();
     }
 }

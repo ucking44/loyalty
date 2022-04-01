@@ -143,6 +143,8 @@
 
 <script src="{{ asset('plugins/js/owl.carousel.min.js') }}"></script>
 
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::message() !!}
 
 @yield('script')
 

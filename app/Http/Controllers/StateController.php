@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\State;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Brian2694\Toastr\Facades\Toastr;
 
 class StateController extends Controller
 {
@@ -45,6 +46,7 @@ class StateController extends Controller
         $state->state_name = $request->state_name;
         $state->save();
 
+        Toastr::success('State Successfully Saved!!!', 'Saving State......');
         return back();
     }
 
@@ -87,6 +89,7 @@ class StateController extends Controller
         $state->state_name = $request->state_name;
         $state->save();
 
+        Toastr::success('State Successfully Updated!!!', 'Updating State......');
         return back();
     }
 
@@ -101,6 +104,7 @@ class StateController extends Controller
         $state = State::findOrFail($state);
         $state->delete();
 
+        Toastr::success('State Successfully Deleted!!!', 'Deleting State......');
         return back();
     }
 }

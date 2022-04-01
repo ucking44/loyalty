@@ -6,6 +6,7 @@ use App\Models\Ward;
 use App\Models\Citizen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 
@@ -65,6 +66,7 @@ class CitizenController extends Controller
         $citizen->phone = $request->phone;
         $citizen->save();
 
+        Toastr::success('Citizen Successfully Saved!!!', 'Saving Citizen......');
         return back();
     }
 
@@ -108,6 +110,7 @@ class CitizenController extends Controller
         $citizen->phone = $request->phone;
         $citizen->save();
 
+        Toastr::success('Citizen Successfully Updated!!!', 'Updating Citizen......');
         return back();
     }
 
@@ -122,6 +125,7 @@ class CitizenController extends Controller
         $citizen = Citizen::findOrFail($id);
         $citizen->delete();
 
+        Toastr::success('Citizen Successfully Deleted!!!', 'Deleting Citizen......');
         return back();
     }
 }

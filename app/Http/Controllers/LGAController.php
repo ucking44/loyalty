@@ -6,6 +6,7 @@ use App\Models\LGA;
 use App\Models\State;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\View;
 
 class LGAController extends Controller
@@ -54,6 +55,7 @@ class LGAController extends Controller
         $lga->lga_name = $request->lga_name;
         $lga->save();
 
+        Toastr::success('LGA Successfully Saved!!!', 'Saving LGA......');
         return back();
     }
 
@@ -93,6 +95,7 @@ class LGAController extends Controller
         $lga->lga_name = $request->lga_name;
         $lga->save();
 
+        Toastr::success('LGA Successfully Updated!!!', 'Updating LGA......');
         return back();
     }
 
@@ -107,6 +110,7 @@ class LGAController extends Controller
         $lga = LGA::findOrFail($id);
         $lga->delete();
 
+        Toastr::success('LGA Successfully Deleted!!!', 'Deleting LGA......');
         return back();
     }
 }
